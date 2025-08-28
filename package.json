@@ -1,0 +1,41 @@
+{
+  "name": "petsite",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "import-puppies": "node scripts/import-puppies.js",
+    "adjust-prices": "node scripts/adjust-prices.js",
+    "test-mongo": "node test-mongo-connection.js"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.2",
+    "animate.css": "^4.1.1",
+    "aos": "^2.3.4",
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^2.2.0",
+    "dotenv": "^16.4.5",
+    "jquery": "^3.7.1",
+    "jsonwebtoken": "^9.0.2",
+    "lucide-react": "^0.468.0",
+    "moment": "^2.30.1",
+    "mongoose": "^8.4.4",
+    "next": "14.2.4",
+    "notyf": "^3.10.0",
+    "owl.carousel": "^2.3.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "sonner": "^1.7.1",
+    "webpack": "^5.92.1"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.2.4",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
+  }
+}

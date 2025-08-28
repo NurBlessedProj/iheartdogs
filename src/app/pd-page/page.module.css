@@ -1,0 +1,39 @@
+.home {
+  margin: 8em auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.home fieldset {
+  border: none;
+}
+
+.home input {
+  padding: 1em;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  background-color: #f8f8f8;
+}
+.home button {
+  width: fit-content;
+  padding: 1em 4em;
+  border: none;
+  background-color: #245c4f;
+  color: white;
+  cursor: pointer;
+}
+.home form p {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.home form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  border: 1px solid lightgray;
+  padding: 1em;
+  border-radius: 5px;
+}

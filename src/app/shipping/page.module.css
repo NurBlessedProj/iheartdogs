@@ -1,0 +1,23 @@
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.info p {
+  font-size: 16px;
+}
+.info h1 {
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+}
+.info h2 {
+  color: black;
+  font-weight: 600;
+  font-size: 17px;
+}
+@media screen and (max-width:768px) {
+  
+}
