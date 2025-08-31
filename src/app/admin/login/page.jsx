@@ -1,14 +1,23 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Shield, Loader2 } from "lucide-react";
+import { useAuth } from "@/hooks/useAuth";
 
 const AdminLogin = () => {
+  const { isAuthenticated, isLoading, login } = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const router = useRouter();
+
+  // Redirect if already authenticated
+  useEffect(() => {
+    if (!isLoading && isAuthenticated) {
+      router.push("/admin/dashboard");
+    }
+  }, [isAuthenticated, isLoading, router]);
 
   const handleLogin = async () => {
     if (loading) return;
@@ -21,28 +30,15 @@ const AdminLogin = () => {
     setError("");
     setLoading(true);
 
-    try {
-      const response = await fetch("/api/admin/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, password }),
-      });
+    const result = await login({ email, password }, true); // true for admin login
 
-      const data = await response.json();
-
-      if (response.ok) {
-        localStorage.setItem("adminToken", "admin-authenticated");
-        router.push("/admin/dashboard");
-      } else {
-        setError(data.message || "Login failed");
-      }
-    } catch (error) {
-      setError("Network error. Please try again.");
-    } finally {
-      setLoading(false);
+    if (result.success) {
+      router.push("/admin/dashboard");
+    } else {
+      setError(result.error);
     }
+
+    setLoading(false);
   };
 
   const handleKeyPress = (e) => {
@@ -50,6 +46,18 @@ const AdminLogin = () => {
       handleLogin();
     }
   };
+
+  // Show loading while checking authentication
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
+        <div className="text-center">
+          <Loader2 className="h-12 w-12 animate-spin text-red-600 mx-auto mb-4" />
+          <p className="text-gray-600">Checking authentication...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">

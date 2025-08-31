@@ -24,19 +24,20 @@ import {
   User,
   Grid3X3,
   List,
+  Loader2,
 } from "lucide-react";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer.jsx/page";
+import { useAuth } from "@/hooks/useAuth";
 
 const AdminDashboard = () => {
+  const { isAuthenticated, isLoading, user, logout, requireAuth } = useAuth();
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
   const [filterRole, setFilterRole] = useState("all");
   const [filterStatus, setFilterStatus] = useState("all");
   const [showPasswords, setShowPasswords] = useState(false);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [checkingAuth, setCheckingAuth] = useState(true);
   const [orders, setOrders] = useState([]);
   const [showCardDetails, setShowCardDetails] = useState(false);
   const [activeTab, setActiveTab] = useState("users");
@@ -44,34 +45,24 @@ const AdminDashboard = () => {
   const router = useRouter();
 
   useEffect(() => {
-    checkAuthentication();
-    loadOrders();
-  }, []);
+    // Check if user is authenticated and has admin role
+    if (!isLoading) {
+      if (!requireAuth("/admin/login", true)) {
+        return; // User will be redirected
+      }
+      // User is authenticated, load data
+      loadOrders();
+      fetchUsers();
+    }
+  }, [isLoading, requireAuth]);
 
   const loadOrders = () => {
     const storedOrders = JSON.parse(localStorage.getItem("orders") || "[]");
     setOrders(storedOrders);
   };
 
-  const checkAuthentication = async () => {
-    const adminToken = localStorage.getItem("adminToken");
-
-    if (!adminToken) {
-      router.push("/admin/login");
-      return;
-    }
-
-    // Simple token check - if token exists, we're authenticated
-    // The API calls will handle proper authentication
-    setIsAuthenticated(true);
-    setCheckingAuth(false);
-    fetchUsers();
-  };
-
   const handleLogout = () => {
-    localStorage.removeItem("adminToken");
-    setIsAuthenticated(false);
-    router.push("/admin/login");
+    logout();
   };
 
   const fetchUsers = async () => {
@@ -79,7 +70,9 @@ const AdminDashboard = () => {
       setLoading(true);
       const response = await fetch("/api/admin/users", {
         headers: {
-          Authorization: `Bearer ${localStorage.getItem("adminToken")}`,
+          Authorization: `Bearer ${
+            user?.token || localStorage.getItem("adminToken")
+          }`,
         },
       });
 
@@ -87,8 +80,8 @@ const AdminDashboard = () => {
         const data = await response.json();
         setUsers(data.users);
       } else {
-        localStorage.removeItem("adminToken");
-        router.push("/admin/login");
+        // Token is invalid, logout user
+        logout();
       }
     } catch (error) {
       console.error("Error fetching users:", error);
@@ -163,20 +156,21 @@ const AdminDashboard = () => {
   });
 
   // Show loading while checking authentication
-  if (checkingAuth) {
+  // Show loading state while checking authentication
+  if (isLoading) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-red-600 mx-auto mb-4"></div>
+          <Loader2 className="h-12 w-12 animate-spin text-red-600 mx-auto mb-4" />
           <p className="text-gray-600">Checking authentication...</p>
         </div>
       </div>
     );
   }
 
-  // Don't show dashboard if not authenticated
+  // If not authenticated, the requireAuth function will handle redirect
   if (!isAuthenticated) {
-    return null; // Will redirect to login
+    return null;
   }
 
   return (
@@ -1485,8 +1479,7 @@ const AdminDashboard = () => {
               </table>
             </div>
           </div>
-          )}
-        
+        )}
       </div>
 
       <Footer />

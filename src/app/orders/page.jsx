@@ -917,10 +917,7 @@ function Page() {
                               <div>
                                 <label className="block text-sm font-semibold text-slate-700 mb-2">
                                   CVV{" "}
-                                  {formData.cardNumber.startsWith("34") ||
-                                  formData.cardNumber.startsWith("37")
-                                    ? "(4 digits)"
-                                    : "(3 digits)"}
+                                  
                                   <span className="text-red-500 ml-1">*</span>
                                 </label>
                                 <input
