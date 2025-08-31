@@ -1485,7 +1485,8 @@ const AdminDashboard = () => {
               </table>
             </div>
           </div>
-        )}
+          )}
+        
       </div>
 
       <Footer />
