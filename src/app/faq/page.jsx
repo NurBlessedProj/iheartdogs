@@ -30,82 +30,81 @@ const FAQPage = () => {
 
   const faqs = [
     {
-      question: "What are Jack Russell Terriers known for?",
+      question: "What should I know about different dog breeds?",
       answer:
-        "Jack Russell Terriers are known for their high energy, intelligence, and bold personality. Originally bred for fox hunting, they're tenacious, athletic, and have a strong prey drive. These spirited dogs are extremely intelligent, which makes them highly trainable but also means they need mental stimulation. They're known for their distinctive appearance with a predominantly white coat, and their lively, fearless temperament makes them excellent companions for active individuals and families.",
+        "Each dog breed has unique characteristics, energy levels, and care requirements. Some breeds are known for their high energy and need lots of exercise, while others are more laid-back. Consider factors like size, temperament, grooming needs, and activity level when choosing a breed. Our team can help match you with the perfect breed based on your lifestyle and preferences. All our puppies come from reputable breeders who prioritize health and temperament.",
       category: "breed",
     },
     {
-      question: "How big do Jack Russell Terriers get?",
+      question: "What size should I expect for different breeds?",
       answer:
-        "Jack Russell Terriers are small dogs, typically standing 10-15 inches (25-38 cm) tall at the shoulder. They generally weigh between 13-17 pounds (6-8 kg). Despite their small size, they are very sturdy and athletic dogs with a compact, muscular build that allows them to be incredibly agile and fast.",
+        "Dog sizes vary greatly by breed. Small breeds typically weigh under 25 pounds, medium breeds range from 25-60 pounds, and large breeds can weigh 60+ pounds. Consider your living space, lifestyle, and ability to handle different sizes when choosing. Our team can provide specific size information for each breed we offer and help you find the right size for your home and family.",
       category: "breed",
     },
     {
-      question: "What is the life expectancy of a Jack Russell Terrier?",
+      question: "What is the typical life expectancy of dogs?",
       answer:
-        "Jack Russell Terriers typically have a long lifespan compared to many other breeds. With proper care, nutrition, and regular veterinary check-ups, they usually live 13-16 years, though many can live even longer. Their robust health and relatively few breed-specific genetic issues contribute to their longevity.",
+        "Life expectancy varies by breed and size. Generally, smaller breeds tend to live longer (12-16 years) than larger breeds (8-12 years). With proper care, nutrition, and regular veterinary check-ups, most dogs can live healthy, happy lives. Mixed breeds often have fewer genetic health issues and may live longer. We provide health guarantees and can discuss expected lifespan for specific breeds we offer.",
       category: "health",
     },
     {
-      question: "Do Jack Russell Terriers require a lot of grooming?",
+      question: "How much grooming do different breeds require?",
       answer:
-        "Jack Russell Terriers have a relatively low-maintenance coat that comes in three varieties: smooth, broken, or rough. All types shed moderately year-round with heavier seasonal shedding. Weekly brushing is typically sufficient for smooth coats, while broken and rough coats may need brushing 2-3 times per week and occasional hand-stripping to remove dead hair. Regular nail trimming, ear cleaning, and dental care are also important parts of their grooming routine.",
+        "Grooming needs vary significantly by breed. Short-haired breeds typically need weekly brushing, while long-haired breeds may require daily brushing and professional grooming. Some breeds are low-shedding, others shed seasonally or year-round. Regular nail trimming, ear cleaning, and dental care are important for all dogs. We can provide specific grooming information for each breed we offer and connect you with local groomers if needed.",
       category: "health",
     },
     {
-      question: "Are Jack Russell Terriers good with children?",
+      question: "Are dogs generally good with children?",
       answer:
-        "Jack Russell Terriers can be good with children, especially when raised with them, but supervision is always recommended. Their high energy and sometimes boisterous nature means they're better suited to families with older children who understand how to interact appropriately with dogs. Jack Russells are sturdy despite their size, but they can be impatient and may not tolerate rough handling. Early socialization and training are essential for a Jack Russell in a family with children.",
+        "Many dogs can be excellent with children when properly socialized and trained. However, temperament varies by breed and individual dog. Some breeds are naturally more patient and gentle with children, while others may be too energetic or protective. Supervision is always recommended when children and dogs interact. We can help match you with breeds known for being family-friendly and provide guidance on introducing your new puppy to children safely.",
       category: "training",
     },
     {
-      question: "How much exercise do Jack Russell Terriers need?",
+      question: "How much exercise do different breeds need?",
       answer:
-        "Jack Russell Terriers are extremely energetic and require significant daily exercise—at least 1-2 hours per day. This should include walks, play sessions, and mentally stimulating activities. Without adequate exercise, they can become destructive or develop behavioral problems. They excel at dog sports like agility, flyball, and earthdog trials. Remember that a tired Jack Russell is a well-behaved Jack Russell!",
+        "Exercise requirements vary greatly by breed. High-energy breeds may need 1-2 hours of exercise daily, while lower-energy breeds might be satisfied with 30-60 minutes. Exercise should include walks, play sessions, and mentally stimulating activities. Without adequate exercise, dogs can become destructive or develop behavioral problems. We can provide specific exercise recommendations for each breed we offer and help you choose a dog that matches your activity level.",
       category: "training",
     },
     {
-      question: "What health issues are common in Jack Russell Terriers?",
+      question: "What health issues should I be aware of?",
       answer:
-        "While Jack Russell Terriers are generally healthy, they can be prone to certain conditions including patellar luxation (slipped kneecaps), eye disorders like lens luxation and cataracts, deafness (especially in predominantly white dogs), and Legg-Calvé-Perthes disease. Some may also develop dental issues or allergies. Regular veterinary check-ups and dental care can help catch and address these issues early.",
+        "Different breeds may be prone to specific health conditions. Common issues across breeds include hip dysplasia, eye problems, dental issues, and allergies. Mixed breeds often have fewer genetic health issues due to genetic diversity. All our puppies come with health guarantees and are from health-tested parents. We provide detailed health information for each breed and can connect you with veterinarians for ongoing care.",
       category: "health",
     },
     {
-      question:
-        "What is the best living environment for a Jack Russell Terrier?",
+      question: "What living environment is best for different breeds?",
       answer:
-        "Jack Russell Terriers adapt well to various living situations, but they thrive in homes with secure fenced yards where they can run and play safely. They can live in apartments if given sufficient exercise and mental stimulation. Due to their strong prey drive and tendency to dig or escape, secure fencing is essential. They're not well-suited to being left alone for long periods, as they can become bored and destructive. An active household that can provide plenty of exercise and companionship is ideal.",
+        "Living environment needs vary by breed. Some breeds adapt well to apartments with sufficient exercise, while others need large yards. Consider factors like size, energy level, and noise tolerance when choosing a breed for your living situation. We can help match you with breeds suitable for your home type and lifestyle. All dogs need secure fencing, mental stimulation, and shouldn't be left alone for extended periods.",
       category: "breed",
     },
     {
-      question: "Are Jack Russell Terriers easy to train?",
+      question: "How trainable are different dog breeds?",
       answer:
-        "Jack Russell Terriers are highly intelligent and can learn quickly, but they can also be independent and stubborn. Training should be consistent, positive, and engaging to keep their attention. Short, fun training sessions work best due to their sometimes limited attention span. They respond well to positive reinforcement techniques and enjoy having 'jobs' to do. Early socialization and training are essential to channel their energy and intelligence positively.",
+        "Trainability varies by breed and individual dog. Some breeds are naturally eager to please and learn quickly, while others may be more independent. Intelligence doesn't always equal easy training - some smart breeds can be stubborn. Training should be consistent, positive, and engaging. Short, fun training sessions work best for most dogs. We can provide training guidance and connect you with local trainers to help with your new puppy.",
       category: "training",
     },
     {
-      question: "How do I select a Jack Russell Terrier puppy?",
+      question: "How do I select the right puppy?",
       answer:
-        "When selecting a Jack Russell puppy, look for one that is alert, curious, and neither overly shy nor aggressive. Ensure the puppy comes from health-tested parents and a reputable breeder who prioritizes temperament and health over appearance. Meet the puppy's parents if possible to get an idea of adult temperament. Consider whether a smooth, broken, or rough coat best suits your lifestyle, and whether you prefer a more active or slightly calmer puppy within the litter.",
+        "When selecting a puppy, look for one that is alert, curious, and neither overly shy nor aggressive. Ensure the puppy comes from health-tested parents and a reputable breeder who prioritizes temperament and health over appearance. Meet the puppy's parents if possible to get an idea of adult temperament. Consider your lifestyle, activity level, and living situation when choosing. We can help match you with the perfect puppy based on your preferences and needs.",
       category: "puppies",
     },
     {
-      question: "What should I feed my Jack Russell Terrier?",
+      question: "What should I feed my puppy?",
       answer:
-        "Jack Russell Terriers thrive on high-quality dog food appropriate for their age, size, and activity level. Due to their high energy, they often benefit from formulas designed for active dogs. Portion control is important as they can gain weight easily despite their activity. Adult Jack Russells typically need 1-1.5 cups of dry food daily, divided into two meals. Always ensure fresh water is available, and consult your veterinarian for specific dietary recommendations based on your dog's individual needs.",
+        "Puppies thrive on high-quality dog food appropriate for their age, size, and activity level. Active breeds may benefit from formulas designed for active dogs. Portion control is important to prevent obesity. Feeding amounts vary by breed and individual needs - typically 1-3 cups daily for adults, divided into two meals. Always ensure fresh water is available. We provide feeding guidelines for each breed and can connect you with veterinarians for specific dietary recommendations.",
       category: "health",
     },
     {
-      question: "Do Jack Russell Terriers bark a lot?",
+      question: "Do dogs bark a lot?",
       answer:
-        "Yes, Jack Russell Terriers tend to be vocal dogs. They were bred to bark when they located prey during hunts, and this trait remains strong in the breed. They're alert and will bark to announce visitors or unusual activities. Early training can help manage excessive barking, but potential owners should be prepared for a dog that will likely be more vocal than many other breeds.",
+        "Barking tendencies vary by breed and individual dog. Some breeds are naturally more vocal and alert, while others are quieter. Dogs may bark to communicate, alert to visitors, or express needs. Early training can help manage excessive barking, but potential owners should consider their living situation and noise tolerance when choosing a breed. We can help match you with breeds that match your preferences for vocalization.",
       category: "training",
     },
     {
-      question: "How do I prepare my home for a Jack Russell Terrier puppy?",
+      question: "How do I prepare my home for a new puppy?",
       answer:
-        "Preparing your home for a Jack Russell puppy involves thorough puppy-proofing due to their curious and mischievous nature. Secure or remove small items they might chew or swallow, protect electrical cords, and use baby gates to restrict access to certain areas if needed. Check your yard fencing for gaps or weak spots, as Jack Russells are escape artists. Prepare a quiet area with a crate or bed, and gather supplies including food and water bowls, appropriate toys for chewing, a collar and leash, and grooming tools. Having plenty of appropriate chew toys is essential to redirect their natural chewing instincts.",
+        "Preparing your home for a new puppy involves thorough puppy-proofing. Secure or remove small items they might chew or swallow, protect electrical cords, and use baby gates to restrict access to certain areas if needed. Check your yard fencing for gaps or weak spots. Prepare a quiet area with a crate or bed, and gather supplies including food and water bowls, appropriate toys for chewing, a collar and leash, and grooming tools. Having plenty of appropriate chew toys is essential to redirect their natural chewing instincts.",
       category: "puppies",
     },
   ];
@@ -133,7 +132,7 @@ const FAQPage = () => {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('https://www.akc.org/wp-content/uploads/2017/11/Jack-Russell-Terrier-head-portrait-outdoors.jpg')",
+              "url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-amber-900/80 to-amber-700/70" />
@@ -146,7 +145,7 @@ const FAQPage = () => {
             Frequently Asked Questions
           </h1>
           <p className="text-xl text-center text-amber-100 max-w-3xl">
-            Everything you need to know about Jack Russell Terriers
+            Everything you need to know about our premium puppies
           </p>
         </div>
       </div>
@@ -289,8 +288,8 @@ const FAQPage = () => {
             Still Have Questions?
           </h2>
           <p className="text-xl mb-8 text-amber-100">
-            We're here to help! Contact us for more information about our Jack
-            Russell Terriers.
+            We're here to help! Contact us for more information about our
+            premium puppies and adoption process.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
