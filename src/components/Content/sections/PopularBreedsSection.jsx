@@ -113,7 +113,7 @@ const PopularBreedsSection = () => {
         ) : (
           <div className="flex overflow-x-auto pb-12 scrollbar-hide gap-4 md:gap-6">
             {console.log("Rendering categories:", categories)}
-            {categories.slice(0, 6).map((category, index) => (
+            {categories.map((category, index) => (
               <Link
                 key={index}
                 href={`/available-puppies?breed=${encodeURIComponent(

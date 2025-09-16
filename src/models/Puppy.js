@@ -120,6 +120,8 @@ puppySchema.statics.getCategories = async function () {
   return Object.values(breedGroups).sort((a, b) => b.count - a.count);
 };
 
-const Puppy = mongoose.models.Puppy || mongoose.model("Puppy", puppySchema);
+const Puppy =
+  mongoose.models.Puppy ||
+  mongoose.model("Puppy", puppySchema, "secondpuppies");
 
 export default Puppy;
